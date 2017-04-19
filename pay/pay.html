@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购买</title>
+    <link rel="icon" href="./img/mei.ico">
+    <script src="./jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    <div class="whole">
+        <div class="pay-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="t-module">模块</th>
+                        <th>服务期限</th>
+                        <th class="down">
+                            <div class="drop-down-list">
+                                <div class="js-drop-cont">
+                                    <input type="text" placeholder="未选择" class="text drop-search-keyword"/>
+                                    <i class="icon-drop-down"></i>
+                                    <ul class="drop-cont-list">
+                                        <li class="drop-i">未选择</li>
+                                        <li class="drop-i">1天</li>
+                                        <li class="drop-i">1月</li>
+                                        <li class="drop-i">6月</li>
+                                        <li class="drop-i">1年</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="dprice">单价</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!--实际项目中这里是js生成的-->
+					<tr>
+                       <td mid="{{value.id}}" name="{{value.name}}" class="t-module">
+							经营分析-客单与连带率(会员与非会员)
+                            <p>洞察行业趋势，利用大数据分析行业发展规律</p>
+                       </td>
+                       <td>
+                           <p class="begin">
+                              <span>起:</span><span class="date"></span>
+                           </p>
+                           <p class="end">
+                              <span>止:</span><span class="date"></span>
+                           </p>
+                       </td>
+                       <td class="down">
+                         <div class="drop-down-list">
+                           <div class="js-drop-cont">
+                                <input type="text" placeholder="未选择" class="text drop-search-keyword"/>
+                                <i class="icon-drop-down"></i>
+                                <ul class="drop-cont-list">
+                                    <li class="expiryTime" price="0" buyId="0">未选择</li>
+                                    <li class="expiryTime" price="1" buyId="1">1天</li>
+                                    <li class="expiryTime" price="25" buyId="2">1月</li>
+                                    <li class="expiryTime" price="125" buyId="3">6月</li>
+									<li class="expiryTime" price="250" buyId="4">1年</li>
+                                </ul>
+                            </div>
+                         </div>
+                       </td>
+                       <td class="dprice">
+                           <div class="price">0</div><span>元</span>
+                       </td>
+                   </tr>
+				   <tr>
+                       <td mid="{{value.id}}" name="{{value.name}}" class="t-module">
+							商品分析-有效单品情况
+                            <p>洞察行业趋势，利用大数据分析行业发展规律</p>
+                       </td>
+                       <td>
+                           <p class="begin">
+                              <span>起:</span><span class="date"></span>
+                           </p>
+                           <p class="end">
+                              <span>止:</span><span class="date"></span>
+                           </p>
+                       </td>
+                       <td class="down">
+                         <div class="drop-down-list">
+                           <div class="js-drop-cont">
+                                <input type="text" placeholder="未选择" class="text drop-search-keyword"/>
+                                <i class="icon-drop-down"></i>
+                                <ul class="drop-cont-list">
+                                    <li class="expiryTime" price="0" buyId="0">未选择</li>
+                                    <li class="expiryTime" price="1" buyId="1">1天</li>
+                                    <li class="expiryTime" price="25" buyId="2">1月</li>
+                                    <li class="expiryTime" price="125" buyId="3">6月</li>
+									<li class="expiryTime" price="250" buyId="4">1年</li>
+                                </ul>
+                            </div>
+                         </div>
+                       </td>
+                       <td class="dprice">
+                           <div class="price">0</div><span>元</span>
+                       </td>
+                   </tr>
+				   <tr>
+                       <td mid="{{value.id}}" name="{{value.name}}" class="t-module">
+							会员分析-不同年龄段分析
+                            <p>洞察行业趋势，利用大数据分析行业发展规律</p>
+                       </td>
+                       <td>
+                           <p class="begin">
+                              <span>起:</span><span class="date"></span>
+                           </p>
+                           <p class="end">
+                              <span>止:</span><span class="date"></span>
+                           </p>
+                       </td>
+                       <td class="down">
+                         <div class="drop-down-list">
+                           <div class="js-drop-cont">
+                                <input type="text" placeholder="未选择" class="text drop-search-keyword"/>
+                                <i class="icon-drop-down"></i>
+                                <ul class="drop-cont-list">
+                                    <li class="expiryTime" price="0" buyId="0">未选择</li>
+                                    <li class="expiryTime" price="1" buyId="1">1天</li>
+                                    <li class="expiryTime" price="25" buyId="2">1月</li>
+                                    
+                                </ul>
+                            </div>
+                         </div>
+                       </td>
+                       <td class="dprice">
+                           <div class="price">0</div><span>元</span>
+                       </td>
+                   </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pay-foot">
+            <div class="desc">已选中个<span class="count"></span>模块,合计:<span style="color: #eb5450">￥</span></div>
+            <div class="totalPirce"></div>
+            <div class="pay">付款</div>
+        </div>
+    </div>
+</body>
+<!--通用全局js-->
+<script src="./gobal.js" type="text/javascript"></script>
+<!--<script src="../../libs/layer/layer.js" type="text/javascript"></script>-->
+<script src="./hlib.js" type="text/javascript"></script>
+<!--基础插件功能js-->
+<!--<script src="../../basic.js" type="text/javascript"></script>-->
+<!-- js模版引入 -->
+<!--<script src="../libs/artTemplate/artTemplate.min.js" type="text/javascript"></script>-->
+<!--<script src="../libs/OpenAPI.js"></script>-->
+<script src="pay.js"></script>
+</html>
