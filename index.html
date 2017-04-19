@@ -1,14 +1,11 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-</head>
-<body>  
-	<h2>{{ page.title }}</h2>
-	<p>the new one</p>
-	<ul>
-	  {% for post in site.posts %}
-	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
-</body> 
+﻿---
+layout: default
+title: my Blog
+---
+<h2>{{ page.title }}</h2>
+<p>the new one</p>
+<ul>
+　{% for post in site.posts %}
+　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　{% endfor %}
+</ul>
