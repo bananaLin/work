@@ -5,29 +5,36 @@
     <title>junior's index</title>
 	<script type="text/javascript" src="./pay/jquery-1.8.3.min.js"></script>
     <style>
+	  .author{margin:12px 0;}
+	  .works{width:1200px;}
 	  .works .pay{display:inline-block;width: 276px;border-radius:3px;box-shadow: 0 0 3px;cursor: pointer;}
 	  .works .pay .top{width: 276px;background-image:url("./img/pay.jpg")}
 	  .works .pay .bottom{width: 276px;border-radius: 0px;background-color: #fff;}
 	  .works div .top{width: 276px;height: 154.86px;background-size: 276px 154.86px;}
-	  .works div .bottom p:nth-child(1){color: #07111b;font-size: 20px;text-align: center;}
-	  
-	  .works .responsive{display:inline-block;width: 276px;border-radius:3px;box-shadow: 0 0 3px;cursor: pointer;}
+	  .works div .bottom p:nth-child(1){color: #07111b;font-size: 20px;text-align: center;margin:10px 0;}
+	  .works div .bottom p:nth-child(2){color: #93999f;font-size: 16px;text-align: left;margin:6px 1px;padding: 0 6px;}
+	  .works .responsive{display:inline-block;width: 276px;border-radius:3px;box-shadow: 0 0 3px;cursor: pointer;margin-left:12px;}
 	  .works .responsive .top{width: 276px;background-image:url("./img/responsive.jpg")}
 	</style>
 </head>
 <body>
+  <div class="author">
+     <span>林洒聪的作品</span>
+  </div>
   <div class="works">
 	<div class="pay">
 		<div class="top"></div>
 		<div class="bottom">
-			<p>shopcart about big data</p>
+			<p>大数据平台--购买模块</p>
+			<p>基于jquery + 第三方插件</p>
 		</div>
 	</div>
 	
 	<div class="responsive">
 		<div class="top"></div>
 		<div class="bottom">
-			<p>a responsive page</p>中文编码
+			<p>响应式页面</p>
+			<p>利用@media适配pc端、移动端</p>
 		</div>
 	</div>
 	
