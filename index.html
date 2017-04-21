@@ -1,4 +1,35 @@
-﻿<h2>junior's pages</h2>
-<ul>
-　<li><a href="./pay/pay.html">a module which in my work</a></li>
-</ul>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>junior's index</title>
+	<script type="text/javascript" src="./pay/jquery-1.8.3.min.js"></script>
+    <style>
+	  .works div .top{width: 276px;height: 154.86px;background-size: 276px 154.86px;}
+	  .works .pay{display:inline-block;width: 276px;border-radius:3px;box-shadow: 0 0 3px;cursor: pointer;}
+	  .works .pay .top{width: 276px;background-image:url("./img/pay.jpg")}
+	  .works .pay .bottom{width: 276px;border-radius: 0px;background-color: #fff;}
+	  .works div .bottom p:nth-child(1){color: #07111b;font-size: 20px;text-align: center;}
+	  .works div .bottom p:nth-child(2){color:#93999f;font-size: 16px;text-align: left;margin-left:6px;margin-right:6px;}
+	</style>
+</head>
+<body>
+  <div class="works">
+	<div class="pay">
+		<div class="top"></div>
+		<div class="bottom">
+			<p>shopcart about big data</p>
+			<p>be 是maked by jQuery,artTemplate</p>
+		</div>
+	</div>
+  </div>
+</body>
+<script type="text/javascript">
+   $(function(){
+	  $(document).on("click", ".pay", function(){
+		 window.location.href = "./pay/pay.html";
+	  });
+   });
+</script>
+</html>
+
