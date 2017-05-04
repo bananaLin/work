@@ -101,7 +101,7 @@
 .box .b-hotel .cart{height: 240px;}
 
 /*页脚广告*/
-.labor-day{display: none;width:100%;height: 178px;position: absolute;top: 484px;background: rgba(7, 17, 27, 0.8);margin:0px; }
+.labor-day{width:100%;height: 178px;position: absolute;background: rgba(7, 17, 27, 0.8);margin:0px;z-index:10;}
 .labor-day img{position: relative;top:-18px;left: 180px;}
 
 /*左边滚动条*/
