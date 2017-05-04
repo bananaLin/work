@@ -6,6 +6,7 @@ $(function(){
      $(document).on('mouseout', '.phone', function(){
            $('.phones').css('display', 'none');
      });
+	 
 
      window.onscroll = function(){
      	var top = document.body.scrollTop;
