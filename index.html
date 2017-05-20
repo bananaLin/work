@@ -68,5 +68,16 @@
       </div>
       <script src="./js/echarts.min.js"></script>
       <script src="./js/myEcharts.js"></script>
+      <script>
+          $(function(){
+            $.ajax({
+              url:'article,json',
+              dataType:'json',
+              success:function(data){
+                   console.log(data)
+              }
+            });
+          })
+      </script>
 </body>
 </html>
