@@ -2,7 +2,7 @@
 var radarChart = echarts.init(document.getElementById('radarChart'));
  // 配置项和数据
 radarOption = {
-    
+    color:{['#2f4554']}
     tooltip: {},
     legend: {
         data: ['技术栈（skill）']

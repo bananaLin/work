@@ -23,9 +23,6 @@ time, mark, audio, video, input {
     vertical-align: baseline;
 }
 
-/*清除input聚焦时边框的样式*/
-input:focus{outline:0 !important}
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {

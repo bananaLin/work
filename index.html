@@ -1,83 +1,62 @@
-﻿<head>
-    <meta charset="UTF-8">
-    <title>junior's index</title>
-	<script type="text/javascript" src="./pay/jquery-1.8.3.min.js"></script>
-	<link rel="stylesheet" href="./tour/css/reset.css">
-    <style>
-    	  body{background-color: #f5f7f9;}	
-	  .cv{border:solid 0.5px #ececec;width: 770px;background-color: #fff;margin: 12px auto;box-shadow: 2px 2px 6px #333;}
-	  .author{width: 100%;height:402px;border-bottom: dashed 1px;}
-	  .author .name{margin: 18px 12px;}
-	  .author .target{margin: 6px 12px;}
-	  .author .pic{margin: 12px 0 0 12px;} 
-	  .author .pic img{width:160px;height: 260px;}
-	  .author .phone{margin: 18px 12px 0 12px;}
-	  .author .phone span{color:#888888;}
-	  .author .target span{color:#888888;margin-left: 4px;}
-	  .author .can{width: 320px;height:320px;position: relative;left: 313px;bottom: 335px;}
-
-	  .objects{padding-left: 12px;}
-               .objects .done{font-size: 20px;font-weight: 700;color: #888888;margin: 12px 0 12px 0;}
-               .objects .object{margin-top: 42px}
-               .objects .object .name{padding:0 12px 12px 0;}
-               .objects .object .skill{margin: 0 0 12px 0;} 
-               .objects .object .date{color: #888888;float: right;}
-               .objects .object .desc{margin: 12px 0 12px 0;color: #555555;line-height: 20px;} 
-	</style>
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <title>Junior's Blog</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="css/page.css">
+      <link rel="stylesheet" href="layui/css/layui.css">
+      <script src="js/jquery-1.8.3.min.js"></script>
+      <script src="js/echarts.min.js"></script>
 </head>
 <body>
-      <div class="cv">
-      	<div class="author">
-      		<div class="pic">
-      			<img src="./img/me.jpg" alt="照片">
-      		</div>
-      		<p class="name">林洒聪</p>
-		<p class="target">应聘<span>全栈工程师</span></p>
-		<p class="phone">电话:<span>15217701050</span></p>
-		<div class="can" id="radarChart">
-			
-		</div>
+      <div class="header">
+            <div class="menu">
+                  <ul>
+                        <li id="index">首页<a></a></li>
+                        <li id="project">项目<a></a></li>
+                        <li id="aboutMe">关于我<a></a></li>
+                  </ul>
+            </div>
+      </div>
+      <div class="content clearfix">
+                   <div  class="main" id="main">
+                        <div id="article">
+                              
+                        
+                        </div>
+                        <div id="projects">
+
+                        </div>
       	</div>
-      	<div class="objects">
-      		<p class="done">项目经验</p>
-      		<div class="object">
-      			<p class="name">美识美业——购物模块  <span class="date">2017-03-17  至 2017-03-24 </span></p>
-      			<p class="skill">基于java + jQuery + html + css</p>
-			<a href="./pay/pay.html">项目演示地址</a>
-                                       <p class="desc">&nbsp;&nbsp;&nbsp;&nbsp;现公司前端运用到的JS库是jQuery,它虽然年龄比较大,但是现在大多数公司还在用。因为它的社区有很多很多大牛为它写很实用的插件。我这个项目就运用到一个第三方插件,artTemplate。另外这一个小项目还有一个亮点,就是总的下拉框与各个子下拉框有联动性。选购完模块后，到了扫码页面，为了兼容IE8，支付二维码我是用java后端生成的，虽然有个jQuery插件可以画出二维码，但那个插件底层是用html5 的canvas画的，所以兼容不了IE8。独立完成这个模块后,得到了前端组长的认可。</p>
 
-      		</div>
+      	<div class="other">
+      	      <div class="name box">
+                               <p class="author">Junior</p>
+                               <p class="posi"><i class="layui-icon" style="color:#00b38a;">&#xe61b;</i> 潮州人  24岁  男</p>
+                               <p class="posi"><i class="layui-icon" style="color:#00b38a;">&#xe63c;</i> 全栈工程师</p>
+                               <p class="posi"><i class="layui-icon" style="color:#00b38a;">&#xe63b;</i> 联系电话:15217701050</p>
+                               <p class="posi"><i class="layui-icon" style="color:#00b38a;">&#xe6fc;</i> 爱好健身,打篮球,音乐</p>    
+                         </div>
 
-      		<div class="object">
-      			<p class="name">理财宝(个人练习项目)  <span class="date">2016-12-01  至 2016-12-11 </span></p>
-      			<p class="skill">基于html + css3</p>
-			<a href="./responsive/index.html">项目演示地址</a>
-                                       <p class="desc">&nbsp;&nbsp;&nbsp;&nbsp;这是一个自适应页面,无论pc端、移动端,它的样式都不会被压“坏”。因为我运用了@media和百分比来实现一套样式适配多种设备。在这个项目中还用到了常见的css3属性,比如:transition、box-shadow、border-radius等等。</p>
-
-      		</div>
-
-		<div class="object">
-      			<p class="name">携程首页(个人练习项目)  <span class="date">2017-04-21  至 2017-05-01 </span></p>
-      			<p class="skill">基于html + css3</p>
-			<a href="./tour/page.html">项目演示地址</a>
-                                       <p class="desc">&nbsp;&nbsp;&nbsp;&nbsp;这个静态页面是我利用工作之余时间做的,为了熟练前端技术,更好掌握布局,position的relative跟absolute。当然还用到“扣图”,有空都会练习前端工程师的基本功</p>
-
-      		</div>
+                         <div class="article box">
+                               <ul>
+                                     <p class="title">文章</p>
+                                     <li id="communicate">Vue.js组件之间的通信</li>
+                               </ul>
+                         </div>	
 
       	</div>
       </div>
-      <script src="./js/echarts.min.js"></script>
-      <script src="./js/myEcharts.js"></script>
-      <script>
-          $(function(){
-            $.ajax({
-              url:'article.json',
-              dataType:'json',
-              success:function(data){
-                   console.log(data)
-              }
-            });
-          })
-      </script>
 </body>
+<script src="layui/layui.js"></script>
+<script src="js/artTemplate.min.js"></script>
+<script src="js/page.js"></script>
+<script>
+layui.use(['layer', 'form'], function(){
+  var layer = layui.layer
+  ,form = layui.form();
+  //layer.msg('一开场就见到你真开心');
+});
+</script> 
 </html>
