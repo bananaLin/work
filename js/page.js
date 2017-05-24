@@ -1,14 +1,20 @@
 $(function(){
        
-       /*vue组件通信*/	
+       /*vue组件通信*/  
        $(document).on('click', '#communicate', function(){
-       	$("#main #projects").empty();
+        $("#main #projects").empty();
              $("#main #article").empty().html(communicate);
        });
 
-        /*vue组件通信*/	
+       /*跨域*/  
+       $(document).on('click', '#domain', function(){
+        $("#main #projects").empty();
+             $("#main #article").empty().html(domain);
+       });
+
+        /*vue组件通信*/ 
        $(document).on('click', '#index', function(){
-       	$("#main #projects").empty();
+        $("#main #projects").empty();
              $("#main #article").empty().html(communicate);
        });
        
@@ -18,10 +24,9 @@ $(function(){
              $("#main #projects").empty().html(projects);
        });
 
-
        /*关于我*/
        $(document).on('click', '#aboutMe', function(){
-       	 $("#main #projects").empty(); 
+         $("#main #projects").empty(); 
               $("#main #article").empty().html(aboutMe);
               // 初始化echarts实例
         var radarChart = echarts.init(document.getElementById('radarChart'));
@@ -137,7 +142,7 @@ communicate +=                        "</div>"
 var projects =                               "<div class='box'>"
 projects +=                                     "<div class='top'>"
 projects +=                                           "<div class='red'></div><div class='orange'></div><div class='green'></div>"
-projects +=                                           "<a href='./pay/pay.html' class='url'><i class='layui-icon' style='color:#fff;'>&#xe64c;</i> 项目演示地址</a>"   
+projects +=                                           "<div class='url'><i class='layui-icon' style='color:#fff;'>&#xe64c;</i> 项目演示地址</div>"   
 projects +=                                      "</div>"
 projects +=                                      "<div class='text'>"
 projects +=                                            "<p class='name'>美识美业——购物模块</p>"
@@ -148,7 +153,7 @@ projects +=                                  "</div>"
 projects +=                                  "<div class='box'>"
 projects +=                                      "<div class='top'>"
 projects +=                                           "<div class='red'></div><div class='orange'></div><div class='green'></div>"
-projects +=                                           "<a href='./responsive/index.html' class='url'><i class='layui-icon' style='color:#fff;'>&#xe64c;</i> 项目演示地址</a>" 
+projects +=                                           "<div class='url'><i class='layui-icon' style='color:#fff;'>&#xe64c;</i> 项目演示地址</div>" 
 projects +=                                      "</div>"
 projects +=                                      "<div class='text'>"
 projects +=                                            "<p class='name'>理财宝(个人练习项目) </p>"
@@ -159,7 +164,7 @@ projects +=                                   "</div>"
 projects +=                                   "<div class='box'>"
 projects +=                                      "<div class='top'>"
 projects +=                                           "<div class='red'></div><div class='orange'></div><div class='green'></div>"
-projects +=                                           "<a href='./tour/page.html' class='url'><i class='layui-icon' style='color:#fff;'>&#xe64c;</i> 项目演示地址</a>" 
+projects +=                                           "<div class='url'><i class='layui-icon' style='color:#fff;'>&#xe64c;</i> 项目演示地址</div>" 
 projects +=                                      "</div>"
 projects +=                                      "<div class='text'>"
 projects +=                                            "<p class='name'>携程首页(个人练习项目) </p>"
@@ -171,3 +176,25 @@ projects +=                                   "</div>"
 var aboutMe =                     "<img src='img/pic.jpg' alt='头像' class='picture' />"
 aboutMe +=                              "<div id='radarChart'></div>"
 
+var domain =             "<div class='title'>前端懂得多一点之跨域</div>"
+domain +=                    "<div class='text'>"
+domain +=                       "<p>我学东西，都要弄清楚三个问题——什么是XX？怎样才算XX？XX能干什么？那今天我就按着这个思路来讲一跨域。</p>"
+domain +=                       "<p>跨域是什么？跨域是指不同域名之间相互访问，这跟我们生活中出入境有点相似。</p>"
+domain +=                       "<p>怎样才算是跨域？域名、端口、协议，这三个条件中有一个不一样的话就是跨域。</p>"
+domain +=                       "<p>跨域能干什么？很明显就是请求不同域名的服务嘛。那说了一大堆。代码怎么写？</p>"
+domain +=                   "<div class='code'>"
+domain +=                   "<div class='top'>"
+domain +=                           "<div class='red'></div><div class='orange'></div><div class='green'></div>"
+domain +=                       "</div>"
+domain +=                 "<p>$.ajax({</p>"
+domain +=                 "<p>&nbsp;&nbsp;url:'http://run.plnkr.co/plunks/v8xyYN64V4nqCshgjKms/data-2.json',</p>"
+domain +=                 "<p>&nbsp;&nbsp;dataType:'jsonp',  //通常是json,跨域的话，这里要改成jsonp</p>"
+domain +=                 "<p>&nbsp;&nbsp;jsonpCallback: 'jsonCallback',</p>"
+domain +=                 "<p>&nbsp;&nbsp;success: function(data){</p>"
+domain +=                       "<p>&nbsp;&nbsp;&nbsp;&nbsp;data = data.sites;</p>"
+domain +=                       "<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(data);</p>"
+domain +=                 "<p>&nbsp;&nbsp;}</p>"
+domain +=                 "<p>});</p>"
+domain +=            "</div>"
+domain +=            "<img class='result'  src='img/result.png' alt='结果'>"
+domain +=            "<p class='last'>是不是发现其实跨域没有那么神奇。</p>"
