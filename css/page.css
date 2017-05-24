@@ -8,8 +8,8 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 .header .menu ul li:hover{color: #00b38a;}
 
 @media only screen and (max-width:400px){
-	.blog{display: none;}
-	.header .menu ul li{display: inline-block;font-size: 1.2rem;font-weight:300;cursor: pointer;margin: 0.7rem 1.9rem 0 0;}
+    .blog{display: none;}
+    .header .menu ul li{display: inline-block;font-size: 1.2rem;font-weight:300;cursor: pointer;margin: 0.7rem 1.9rem 0 0;}
 }
 
 /*内容部分*/
@@ -18,6 +18,10 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 .content{width: 90%;margin: 2.5rem auto;}
 .content .main{float: left;width: 69%;color: #00b38a;}
 .content #article{box-shadow: 0 0 3px #333;background-color:#f7f7f7; }
+.content #article .text{color: #333333;}
+.content #article .text p{margin:0px 0 0 12px;}
+.content #article .text p:first-child{margin:10px 0 0 12px;}
+.content #article .text .last{margin:2px 0 0 12px;padding-bottom: 12px;}
 .content .main .title{text-align: center;font-size: 22px;height: 42px;line-height: 42px;border-bottom: dashed 1px #333;}
 .content .main .text{color: #333333;text-align: left;}
 .content .main .text .code{width:90%;margin:12px auto;background-color:#2d2d2d;color: #35aa38;border-radius:3px;padding:0 0 12px 0;box-shadow:0 0 6px #333;}
@@ -26,6 +30,7 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 .content .main .text .code .top .red{;background-color:#fc625d;margin-left: 12px;}
 .content .main .text .code .top .orange{;background-color:#fdbc40;}
 .content .main .text .code .top .green{;background-color:#35cd4b;}
+.content .main .text .result{width:800px;margin:12px 0 12px 24px ;display:inline-block;}
 .content .main .text p:nth-child(1){margin-top:12px; }
 .content .main .text p{margin-left:12px; }
 .content .main .text .last{margin-bottom:12px; } 
@@ -46,7 +51,7 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 .content #projects .box .top .red{;background-color:#fc625d;margin-left: 12px;}
 .content #projects .box .top .orange{;background-color:#fc625d;margin-left: 2px;}
 .content #projects .box .top .green{;background-color:#35cd4b;}
-.content #projects .box .top .url{width: 122px;display:inline-block;height: 2.8rem;line-height: 2.8rem;color: #fff;float: right;cursor: pointer;}
+.content #projects .box .top .url{width: 122px;color: #fff;float: right;cursor: pointer;}
 .content #projects .box  .text .name{margin: 10px 12px;font-size: 20px;}
 .content #projects .box  .text .skill{margin: 10px 12px;}
 
@@ -54,7 +59,7 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 #radarChart{width: 520px;height:540px;position: relative;left: 20%;}
 
 @media only screen and (min-width:1300px){
-	.content{width: 1238px;margin: 2.5rem auto;}
+    .content{width: 1238px;margin: 2.5rem auto;}
 }
 
 
