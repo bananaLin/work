@@ -16,6 +16,11 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 .box{width:100%;box-shadow: 0 0 3px #333;background-color:#f7f7f7;}
 
 .content{width: 90%;margin: 2.5rem auto;}
+
+@media only screen and (max-width:900px){
+    .content{width: 810px;margin: 2.5rem auto;}
+}
+
 .content .main{float: left;width: 69%;color: #00b38a;}
 .content #article{box-shadow: 0 0 3px #333;background-color:#f7f7f7; }
 .content #article .text{color: #333333;}
@@ -54,7 +59,7 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 .content #projects .box .top .url{width: 122px;color: #fff;float: right;cursor: pointer;}
 .content #projects .box  .text .name{margin: 10px 12px;font-size: 20px;}
 .content #projects .box  .text .skill{margin: 10px 12px;}
-
+.content #projects .box .url{margin:12px 0 0 0 ;}
 .picture{width: 125px;height: 200px;margin: 12px 0 12px 0;position: relative;left: 42%;}
 #radarChart{width: 520px;height:540px;position: relative;left: 20%;}
 
