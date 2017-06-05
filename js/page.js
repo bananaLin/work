@@ -6,13 +6,19 @@ $(function(){
              $("#main #article").empty().html(communicate);
        });
 
+       /*原型链*/  
+       $(document).on('click', '#proto', function(){
+        $("#main #projects").empty();
+             $("#main #article").empty().html(proto);
+       });
+
        /*跨域*/  
        $(document).on('click', '#domain', function(){
         $("#main #projects").empty();
              $("#main #article").empty().html(domain);
        });
 
-        /*vue组件通信*/ 
+        /*vue组件通信*/ proto
        $(document).on('click', '#index', function(){
         $("#main #projects").empty();
              $("#main #article").empty().html(communicate);
@@ -62,7 +68,7 @@ $(function(){
         radarChart.setOption(radarOption);
        });
 
-        $('#communicate').click();
+       $('#communicate').click();
 
 });
 
@@ -198,3 +204,38 @@ domain +=                 "<p>});</p>"
 domain +=            "</div>"
 domain +=            "<img class='result'  src='img/result.png' alt='结果'>"
 domain +=            "<p class='last'>是不是发现其实跨域没有那么神奇。</p>"
+
+
+var proto =                      "<div class='title'>深入学习JavaScript之原型链</div>"
+proto +=                              "<div class='text'>"
+proto +=                                    "<p>要说原型链，就先搞懂原型先吧。官方的解释是说:每个对象都有一个内部链接到另一个对象，称为它的原型 prototype。还给出了这样的例子:（<a href='https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain'>点击这里查看原文</a>）</p>"
+proto +=                                    "<div class='code'>"
+proto +=                                          "<div class='top'>"
+proto +=                                                "<div class='red'></div><div class='orange'></div><div class='green'></div>"
+proto +=                                          "</div>"
+proto +=                                          "<p>// 让我们假设我们有一个对象 o, 其有自己的属性 a 和 b：</p>"
+proto +=                                          "<p>// {a: 1, b: 2}</p>"
+proto +=                                          "<p>// o 的原型 o.__proto__有属性 b 和 c：</p>"
+proto +=                                          "<p>// {b: 3, c: 4}</p>"
+proto +=                                          "<p>// 最后, o.__proto__.__proto__ 是 null.</p>"
+proto +=                                          "<p>// 这就是原型链的末尾，即 null，</p>"
+proto +=                                          "<p>// 根据定义，null 没有__proto__.</p>"
+proto +=                                          "<p>// 综上，整个原型链如下: </p>"
+proto +=                                          "<p>// {a:1, b:2} ---> {b:3, c:4} ---> null</p>"
+proto +=                                          "<p>console.log(o.a); // 1</p>"
+proto +=                                          "<p>// a是o的自身属性吗？是的，该属性的值为1</p>"
+proto +=                                          "<p>console.log(o.b); // 2</p>"
+proto +=                                          "<p>// b是o的自身属性吗？是的，该属性的值为2</p>"
+proto +=                                          "<p>// o.__proto__上还有一个'b'属性,但是它不会被访问到.这种情况称为'属性遮蔽 (property shadowing)'.</p>"
+proto +=                                          "<p>console.log(o.c); // 4</p>"
+proto +=                                          "<p>// c是o的自身属性吗？不是，那看看o.__proto__上有没有.</p>"
+proto +=                                          "<p>// c是o.__proto__的自身属性吗？是的,该属性的值为4</p>"
+proto +=                                          "<p>console.log(o.d); // undefined</p>"
+proto +=                                          "<p>// d是o的自身属性吗？不是,那看看o.__proto__上有没有.</p>"
+proto +=                                          "<p>// d是o.__proto__的自身属性吗？不是，那看看o.__proto__.__proto__上有没有.</p>"
+proto +=                                          "<p>// o.__proto__.__proto__为null，停止搜索，</p>"
+proto +=                                          "<p>// 没有d属性，返回undefined</p>"
+proto +=                                    "</div>"
+proto +=                                    "<p>看到这里，通俗来讲“原型”，不就是模板的意思嘛。比如说，摩托车的原型就是自行车、手机的原型就是电话...</p>"
+proto +=                                    "<p>那么接下来，让我们来理解什么是原型链吧。还是用上面的例子，每个实例内部都有一个连接到另外一个对象的链，这样的一个抽象的东西被我们称为原型链，而且这条链的终端是null。</p>"
+proto +=                              "</div>"

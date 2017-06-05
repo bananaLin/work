@@ -17,8 +17,8 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 
 .content{width: 90%;margin: 2.5rem auto;}
 
-@media only screen and (max-width:900px){
-    .content{width: 810px;margin: 2.5rem auto;}
+@media only screen and (max-width:1030px){
+    .content{width: 927px;margin: 2.5rem auto;}
 }
 
 .content .main{float: left;width: 69%;color: #00b38a;}
@@ -26,7 +26,7 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
 .content #article .text{color: #333333;}
 .content #article .text p{margin:0px 0 0 12px;}
 .content #article .text p:first-child{margin:10px 0 0 12px;}
-.content #article .text .last{margin:2px 0 0 12px;padding-bottom: 12px;}
+.content #article .text p:last-child{margin:2px 0 0 12px;padding-bottom: 12px;}
 .content .main .title{text-align: center;font-size: 22px;height: 42px;line-height: 42px;border-bottom: dashed 1px #333;}
 .content .main .text{color: #333333;text-align: left;}
 .content .main .text .code{width:90%;margin:12px auto;background-color:#2d2d2d;color: #35aa38;border-radius:3px;padding:0 0 12px 0;box-shadow:0 0 6px #333;}
