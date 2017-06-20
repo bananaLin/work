@@ -70,6 +70,14 @@ $(function(){
 
        $('#communicate').click();
 
+      /* var w = $(document.body).width();
+       if(w>300 && w < 500){
+            console.log("asd")
+             var split = '<div style="width:100%;height:32px;"><div>'
+             var html = communicate  + split + domain + split + proto;
+             $("#main #article").empty();
+             $("#main #article").empty().html(html);
+       }*/
 });
 
 var communicate =               "<div class='title'>Vue.js组件之间的通信</div>"

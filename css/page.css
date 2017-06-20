@@ -67,7 +67,14 @@ html{font-size: 62.5%;background-color: #e8e8e8;}
     .content{width: 1238px;margin: 2.5rem auto;}
 }
 
-
+@media only screen and (min-width:300px) and (max-width: 500px){
+    .content{width:100%;}
+    .content .other{display: none;}
+    .content .article{display: none;}
+    .content .main{width:92%;margin: 0 auto;padding-left:12px; }
+    .picture{width: 100px;height: 175px;margin: 12px 0 12px 0;position: relative;left: 36%;}
+    #radarChart{width: 220px;height:240px;position: relative;left: 20%;}
+}
 
 
 
