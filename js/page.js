@@ -18,7 +18,7 @@ $(function(){
              $("#main #article").empty().html(domain);
        });
 
-        /*vue组件通信*/ proto
+        /*vue组件通信*/
        $(document).on('click', '#index', function(){
         $("#main #projects").empty();
              $("#main #article").empty().html(communicate);
@@ -28,6 +28,12 @@ $(function(){
       $(document).on('click', '#project', function(){
              $("#main #article").empty();
              $("#main #projects").empty().html(projects);
+       });
+
+       /*rem*/
+      $(document).on('click', '#rem', function(){
+             $("#main #projects").empty();
+             $("#main #article").empty().html(rem);
        });
 
        /*关于我*/
@@ -68,7 +74,7 @@ $(function(){
         radarChart.setOption(radarOption);
        });
 
-       $('#communicate').click();
+       $('#rem').click();
 
       /* var w = $(document.body).width();
        if(w>300 && w < 500){
@@ -247,3 +253,50 @@ proto +=                                    "</div>"
 proto +=                                    "<p>看到这里，通俗来讲“原型”，不就是模板的意思嘛。比如说，摩托车的原型就是自行车、手机的原型就是电话...</p>"
 proto +=                                    "<p>那么接下来，让我们来理解什么是原型链吧。还是用上面的例子，{b: 3, c: 4}(即例子说的 o.__proto__,)这个对象是对象o(即例子中的{a: 1, b: 2})的父类，也就是说{a: 1, b: 2}这个对象中的__proto__指向了{b: 3, c: 4}这个  模板  。每个实例内部都有一个连接到另外一个对象的链，这样的一个抽象的东西被我们称为原型链，而且这条链的终端是null。</p>"
 proto +=                              "</div>"
+
+
+var rem =       "<div class='title'>那些年被'62.5%'欺骗过的rem</div>"
+rem +=        "<div class='text'>"
+rem +=          "<p>前言</p>"
+rem +=          "<p>有过移动端开发经验的人都知道，ios跟android页面的 像素(px)密度 不一样。这就有点尴尬了，因为在android这边一个div 180px刚刚好，但是去了ios那边可能就不一样了，可能会造成页面变得扭曲。为了解决这个问题，救星——rem出现了。它的值默认是1rem == 16px,这样子的话计算起来就不是很方便了。所以很多人喜欢把它设置成1rem == 10px。10/16就是 0.625。我们的主角出现了！</p>"
+rem +=          "<p>怎么设置rem</p>"
+rem +=          "<p>很多人知道在根节点设置，也就是 html{font-size:62.5%;} 就可以了。我不知道是谁一开始就这么说的。但我知道这个人也太不负责任了。为什么呢？因为谷歌只允许font-size最小是12px.</p>"
+rem +=          "<div class='code'>"
+rem +=              "<div class='top'>"
+rem +=                 "<div class='red'></div><div class='orange'></div><div class='green'></div>"
+rem +=              "</div>"
+rem +=              "<p>< !DOCTYPE html></p>"
+rem +=              "<p>< html></p>"
+rem +=              "<p>< head></p>"
+rem +=              "<p>< meta charset='utf-8'></p>"
+rem +=              "<p>< title>测试rem</ title></p>" 
+rem +=              "<p>< style>"
+rem +=              "<p>&nbsp;&nbsp;html{font-size: 62.5%;}</p>"
+rem +=              "<p>&nbsp;&nbsp;.px{width: 100px;height: 10px;background-color: red;}</p>"
+rem +=              "<p>&nbsp;&nbsp;.rem{width: 10rem;height: 10px;background-color: blue;}</p>"
+rem +=              "<p>< /style></p>" 
+rem +=              "<p></head></p>"
+rem +=              "<p>< body></p>"
+rem +=              "<p>&nbsp;&nbsp;< div class='px'></ div></p>"
+rem +=              "<p>&nbsp;&nbsp;< div class='rem'></ div></p>"
+rem +=              "<p>< /body></p>"
+rem +=              "<p>< /html></p>"
+rem +=          "</div>"
+rem +=          "<p>按网上那些人的道理，两个div本应该一样宽的。但是呢，现实是这个样子的......（实际上你用谷歌用rem的会长一点，但用万恶的IE打开是蓝色比较短，火狐是一样长。）各个浏览器还不一样，这很是尬尴啊！</p>"
+rem +=          "<p>如何正确设置rem的大小</p>"
+rem +=          "<p>还是在根节点设置，但代码就要改成这样了。</p>"
+rem +=          "<div class='code'>"
+rem +=                "<div class='top'>"
+rem +=                 "<div class='red'></div><div class='orange'></div><div class='green'></div>"
+rem +=              "</div>"
+rem +=              "<p>html{font-size: 625%;}</p>"
+rem +=          "</div>"
+rem +=          "<p>或者</p>"
+rem +=          "<div class='code'>"
+rem +=                "<div class='top'>"
+rem +=                 "<div class='red'></div><div class='orange'></div><div class='green'></div>"
+rem +=              "</div>"
+rem +=              "<p>html{font-size:100px;}</p>"
+rem +=          "</div> "       
+rem +=          "<p>不过现在的1rem 是等于 100px，但是整的倍数比较容易计算啊。而且IE、火狐、谷歌等等浏览器都兼容的。不会说在各个浏览器还长短不一样，这种情况不存在的！</p>"
+rem +=        "</div>"
