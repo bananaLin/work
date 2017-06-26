@@ -9,7 +9,7 @@ new Vue({
     		{'count':1,'price':69,'show':true,'src':'./image/jip.jpg','desc':'雷柏（Rapoo） X221 无线鼠标键盘套装 无线键盘鼠标套装 无线键鼠套装 电脑键'},
     		{'count':1,'price':2499,'show':true,'src':'./image/nova.jpg','desc':' nova'},
     		{'count':1,'price':249,'show':true,'src':'./image/tix.jpg','desc':' 剃须刀'},
-    		{'count':1,'price':12998,'show':true,'src':'./image/mac.jpg','desc':' Apple MacBook Pro 13.3英寸笔记本电脑 深空灰色（Multi-Touch Bar/Core i5/8GB/256GB MLH12CH/A）'}]
+    		{'count':1,'price':12998,'show':false,'src':'./image/mac.jpg','desc':' Apple MacBook Pro 13.3英寸笔记本电脑 深空灰色（Multi-Touch Bar/Core i5/8GB/256GB MLH12CH/A）'}]
     	}
     },
     computed: {
