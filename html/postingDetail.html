@@ -309,11 +309,9 @@
             $("#dialog").show();
             return;
         }
-	$("#toast").show();
 	$('#iosDialog').fadeOut(200);
-	setInterval(function(){
-		$("#toast").hide();
-	},1000);
+        $("#message").text("管理员审核后可查看评论");
+        $("#dialog").show();
 		
         /*$.ajax({
             type:"POST",
