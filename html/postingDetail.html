@@ -1,0 +1,345 @@
+<head>
+    <title>话题</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="referrer" content="never">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="./css/wxui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/weui.min.css" />
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <style>
+        .footer{position: fixed;bottom: 0;width: 100%;}
+        .container{height: 90%;overflow-y: scroll;}
+        .info span{font-size: 14px;color: #7f7f7f;}
+        .author{margin: 0 0 0 10px}
+        .type{margin: 0 0 0 10px}
+        img{width: 20px;}
+        .top{background: #f7f7f7;padding: 6px 0 6px 8px;color: #7f7f7f;display: flex;top: 0;}
+        .bottomInfo{display: flex;justify-content : space-between;}
+        .bottomInfo div{display: inline-block;width: 30%;font-size: 13px;cursor: pointer;}
+        .bottomInfo div img{width: 20px;}
+        .bottomInfo span{vertical-align: -3px;color:#7f7f7f;}
+        .weui-article{background-color: #fff;}
+        .container{background-color: #f2f2f2;}
+        .comment{color:#7f7f7f;background-color: #fff;margin: 6px 0 0 0;text-align: center;font-size: 17px;font-weight: 700;padding: 4px 0;}
+        #comment{display: inline-block;cursor: pointer;width: 40%;height: 30px;line-height: 30px;background-color: #3789ef;color: #fff;text-align: center;border-radius: 3px;margin: 0 auto;position: relative;left: 30%;}
+        .comments div{background-color: #fff;color: #7f7f7f;padding: 8px 6px 8px 8px;margin: 6px 0 0 0;}
+        .comments div span{font-weight: 200;font-size: 16px;display: inline-block;width: 48%;}
+        h4{font-size: 14px;font-weight: 200;display: inline-block;width: 48%;text-align: right;}
+        h3{font-size: 14px;}
+        .weui-half-screen-dialog__hd{height: 4em;padding: 8px 0 0 0;}
+		.bottomInfo img{    vertical-align: -6px;}
+    </style>
+</head>
+<div class="top">
+    <a onclick="back()">
+        <img src="./images/icon_back.png" alt="返回">
+        <span class="back">返回</span>
+    </a>
+</div>
+<div class="container">
+    <article class="weui-article">
+        <h1 class="title">测试标题</h1>
+        <section>
+            <div class="info">
+                <span class="date">2019-09-10</span><span class="author">林阳光</span><span class="type">安全规范</span>
+            </div>
+            <p class="content">生活就像海洋，只有意志坚强的人才能到达彼岸！</p>
+            <div class="bottomInfo">
+                <div>
+                    <img src="./images/icon_unlike.png" class="doLike">
+                    <span class="likeCount">2</span><span>人点赞</span>
+                </div>
+                <div>
+                    <img src="./images/icon_read.png">
+                    <span class="readCount">2</span><span>人阅读</span>
+                </div>
+            </div>
+        </section>
+    </article>
+    <div class="comment">点击评论</div>
+    <div class="comments">
+		<div >
+            <span userId='123'>2****0</span>
+            <h4>2019-09-10</h4>
+			<h3>你可以哭，但不能怂</h3>
+        </div>
+		<div >
+            <span userId='123'>2****0</span>
+            <h4>2019-09-10</h4>
+			<h3>据说，爱笑的女孩鱼尾纹都比较多！</h3>
+        </div>
+		<div >
+            <span userId='123'>2****0</span>
+            <h4>2019-09-10</h4>
+			<h3>不想当厨子的裁缝不是好司机</h3>
+        </div>
+		<div >
+            <span userId='123'>2****0</span>
+            <h4>2019-09-10</h4>
+			<h3>白天是理性的，夜晚是感性的</h3>
+        </div>
+    </div>
+    <div style="height: 100px"></div>
+</div>
+
+
+<div class="page">
+    <!--<div class="page__hd">
+        <h1 class="page__title">Half-screen Dialog</h1>
+        <p class="page__desc">半屏组件</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+        <a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSDialog1">样式一</a>
+        <a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSDialog2">样式二</a>
+    </div>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>-->
+
+    <div id="dialog" style="display: none;">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="weui-dialog__hd" style="padding: 14px 10px 10px;"><strong class="weui-dialog__title">提示</strong></div>
+            <div class="weui-dialog__bd" style="padding: 0;" id="message"></div>
+            <div class="weui-dialog__ft">
+                <a href="javascript:close();" class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="dialogs">
+        <!--BEGIN dialog1-->
+        <div class="js_dialog" id="iosDialog" style="display: none;">
+            <div class="weui-mask"></div>
+            <div class="weui-half-screen-dialog">
+                <div class="weui-half-screen-dialog__hd">
+                    <div class="weui-half-screen-dialog__hd__side">
+                        <button class="weui-icon-btn weui-icon-btn_close">关闭</button>
+                    </div>
+                    <div class="weui-half-screen-dialog__hd__main">
+                        <strong class="weui-half-screen-dialog__title">评论</strong>
+                    </div>
+                </div>
+                <div class="weui-half-screen-dialog__bd">
+                    <div class="weui-cells weui-cells_form">
+                        <div class="weui-cell" style="height: 240px;">
+                            <div class="weui-cell__bd">
+                                <textarea id="content" class="weui-textarea" placeholder="请评论" style="color: #3789ef;" rows="3"></textarea>
+                                
+                                <div>
+                                    <span id="comment" onclick="commit()">提交</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END dialog1-->
+    </div>
+	<div id="toast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+            <p class="weui-toast__content">已提交</p>
+        </div>
+    </div>
+	
+</div>
+<div class="footer" style="margin: 40px 0 0 0">
+		<div class="weui-tab">
+			<div class="weui-tab__panel">
+
+			</div>
+			<div class="weui-tabbar">
+				<a href="./index.html" class="weui-tabbar__item weui-bar__item" id="index">
+					<img id="index_img" src="./images/icon_index.png" alt="" class="weui-tabbar__icon">
+					<p class="weui-tabbar__label" id="index_font" style="color: #7f7f7f;">首页</p>
+				</a>
+				<a href="./postingList.html" class="weui-tabbar__item weui-bar__item" id="list">
+					<img id="posting_list_img" src="./images/icon_list_select.png" alt="" class="weui-tabbar__icon">
+					<p class="weui-tabbar__label" id="list_font" style="color: #3789ef;">话题</p>
+				</a>
+				<a href="./addPosting.html" class="weui-tabbar__item" id="posting">
+					<img id="posting_img" src="./images/icon_add_posting.png" alt="" class="weui-tabbar__icon">
+					<p class="weui-tabbar__label" id="posting_font" style="color: #7f7f7f;">发帖</p>
+				</a>
+				<a href="./me.html" class="weui-tabbar__item" id="me">
+					<img id="me_img" src="./images/icon_me.png" alt="" class="weui-tabbar__icon">
+					<p class="weui-tabbar__label" id="me_font" style="color: #7f7f7f;">我</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+    $(function () {
+        var $iosDialog = $('#iosDialog');
+
+        /*$('#dialogs').on('click', '.weui-mask', function(){
+            $(this).parents('.js_dialog').fadeOut(200);
+        });*/
+
+        $('.weui-icon-btn_close').on('click', function(){
+            $iosDialog.fadeOut(200);
+        });
+
+        $('.comment').on('click', function(){
+            $("#content").val('');
+            $iosDialog.fadeIn(200);
+        });
+
+        var postingId = getUrlParamByName("id");
+        initData(postingId);
+
+    });
+
+    function initData(postingId){
+        $.ajax({
+            type:"GET",
+            url: "${baseURL}/posting/postingAction!readPosting.action",
+            cache:false,
+            dataType: "json",
+            async:false,
+            data:{postingId:postingId},
+            success: function(result){
+                var data = result.data.data;
+                var posting = data.posting;
+                var state = posting.state;
+                // 开启评论才能评论 话题关闭不能评论
+                if(posting.can_comment == "F" || state == 'CLOSE'){
+                    $(".comment").hide();
+                }else {
+                    $(".comment").show();
+                }
+
+                console.log(data)
+                $("#posting").val(posting.id);
+                $(".title").html(posting.title);
+                $(".date").html(formDate(new Date(posting.add_time).getTime(), 'day'));
+                $(".author").html(posting.anonymity == 'T' ? '匿名用户' : posting.userId);
+                $(".type").html(posting.category);
+                $(".content").html(posting.content);
+                $("#state").val(state);
+                var likeCount = data.likeCount;
+                $(".likeCount").html(likeCount);
+                var readCount = data.readCount;
+                $(".readCount").html(readCount);
+                data.onLike ? $(".doLike").attr('src', './images/icon_like.png') : $(".doLike").attr('src', './images/icon_unlike.png');
+
+                var comments = data.comments;
+                $(".comments").html('');
+                for(var i=0;i<comments.length;++i){
+                    var comment = comments[i];
+                    if(comment.is_show == "T"){
+                        var html = "<div >";
+                        html +=     "<span userId='" + comment.user_id +"'>" + comment.userId +"</span>";
+                        html +=     "<h4>" + comment.add_time + "</h4>";
+                        html +=     "<h3>" + comment.content + "</h3>";
+                        html += "</div>";
+                        $(".comments").append(html);
+                    }
+                }
+
+            }
+        });
+    }
+
+    $(document).on('click', '.doLike', function () {
+        var state = $("#state").val();
+        // 关闭的话题不能点赞
+        if(state == 'CLOSE'){
+            $("#message").text("话题已关闭，请勿点赞");
+            $("#dialog").show();
+            return;
+        }else if(state == 'COMMIT'){
+            $("#message").text("话题未审核，请勿点赞");
+            $("#dialog").show();
+            return;
+        }else{
+            var src = $(".doLike").attr('src');
+            var like = src.indexOf('unlike') > 0 ? 'ON' : 'OFF';
+            var postingId = $("#posting").val();
+            /*$.ajax({
+                type:"POST",
+                url: "${baseURL}/like/likeAction!doLike.action",
+                cache:false,
+                dataType: "json",
+                async:false,
+                data:{like:like, type:'POSTING', typeId:postingId},
+                success: function(result){
+                    if(result.code == "0"){
+                        $.ajax({
+                            type:"GET",
+                            url: "${baseURL}/like/likeAction!getLikeCount.action",
+                            cache:false,
+                            dataType: "json",
+                            async:false,
+                            data:{typeId:postingId, type:'POSTING'},
+                            success: function(result){
+                                var count = result.data.count;
+                                $(".likeCount").html(count);
+                            }
+                        });
+                        like == "ON" ? $(".doLike").attr('src', './images/icon_like.png') : $(".doLike").attr('src', './images/icon_unlike.png');
+                    }
+                }
+            });*/
+        }
+    });
+
+    function commit(){
+        var postingId = $("#posting").val();
+        var content = $("#content").val();
+        if(!content){
+            $("#message").text("请填写内容");
+            $("#dialog").show();
+            return;
+        }
+		$("#toast").show();
+		setInterval(function(){
+			$("#toast").hide();
+		},1000);
+		
+        /*$.ajax({
+            type:"POST",
+            url: "${baseURL}/comments/commentsAction!addComment.action",
+            cache:false,
+            dataType: "json",
+            async:false,
+            data:{postingId:postingId, content:content, toUserId:''},
+            success: function(result){
+                if(result.code == "0"){
+                    $('#iosDialog').fadeOut(200);
+                    $("#message").text("管理员审核后可查看评论");
+                    $("#dialog").show();
+                    return;
+                }
+            }
+        });*/
+    }
+
+	
+
+    function back() {
+        window.history.back();
+    }
+
+    function getUrlParamByName(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        return r != null ? unescape(r[2]) : "";
+    }
+    
+    function close() {
+        $("#dialog").hide();
+    }
+</script>
