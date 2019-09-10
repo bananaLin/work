@@ -219,4 +219,15 @@ function commit(state){
     $(document).on('click', '.typeSelect', function () {
         $(this).removeClass("typeSelect").addClass("type")
     });
+
+    $(document).on('input', '#content', function () {
+        var content = $("#content").val();
+        var length = content.length;
+        $("#len").html(length);
+        if(length > 1000){
+            $("#len").css("color", "red");
+        }else{
+            $("#len").css("color", "#3789ef");
+        }
+    });
 </script>
