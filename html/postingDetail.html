@@ -267,8 +267,13 @@
         }else{
             var src = $(".doLike").attr('src');
             var like = src.indexOf('unlike') > 0 ? 'ON' : 'OFF';
-            var postingId = $("#posting").val();
-            /*$.ajax({
+            
+	    like == "ON" ? $(".doLike").attr('src', './images/icon_like.png') : $(".doLike").attr('src', './images/icon_unlike.png');
+	    var count = $(".likeCount").html();
+	    like == "ON" ? ++count : --count;
+	    $(".likeCount").html(count);
+            /*var postingId = $("#posting").val();
+	    $.ajax({
                 type:"POST",
                 url: "${baseURL}/like/likeAction!doLike.action",
                 cache:false,
