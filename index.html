@@ -1,65 +1,77 @@
-<!DOCTYPE html>
-<html>
 <head>
-      <meta charset="utf-8">
-      <title>Junior's Blog</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-      <link rel="stylesheet" type="text/css" href="css/page.css">
-      <link rel="stylesheet" href="layui/css/layui.css">
-      <script src="js/jquery-1.8.3.min.js"></script>
-      <script src="js/echarts.min.js"></script>
+    <title>交流平台</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="referrer" content="never">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="./css/wxui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/weui.min.css" />
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <style>
+        .top{background: #3789ef;color: #fff;text-align: center;width: 100%;height: 180px;border-radius: 0 0 18px 18px;padding: 30px 0 0 0;}
+        .count{margin: 0 0 10px 0;}
+        .posting a{color: #fff;font-weight: 700;}
+        .bottom{margin: 20px 0 0 0;color: #7f7f7f;display: flex;justify-content : space-between;font-size: 14px;}
+        .bottom div{display: inline-block;width: 32%;cursor: pointer;}
+        .bottom img{width: 80%;display: block;margin: 0 auto;}
+        .bottom span{display: inline-block;width: 100%;text-align: center;}
+    </style>
 </head>
 <body>
-      <div class="header">
-            <div class="menu">
-                  <ul>
-                        <li id="index">首页<a></a></li>
-                        <li id="project">项目<a></a></li>
-                        <li id="aboutMe">关于我<a></a></li>
-			<li id="s">特别的<a href="./vue/index.html" target="_blank"> </a><a></a></li>
-                  </ul>
+    <div class="container">
+        <div class="top">
+            <div class="count">
+                <span class="postingCount">6</span>个
             </div>
-      </div>
-      <div class="content clearfix">
-                   <div  class="main" id="main">
-                        <div id="article">
-                              
-                        </div>
-                        <div id="projects">
-
-                        </div>
-      	</div>
-
-      	<div class="other">
-      	      <div class="name box">
-                               <p class="author">Junior</p>
-                               <p class="posi"><i class="layui-icon" style="color:#00b38a;">&#xe61b;</i> 潮州人  24岁  男</p>
-                               <p class="posi"><i class="layui-icon" style="color:#00b38a;">&#xe63c;</i> 全栈工程师</p>
-                               <p class="posi"><i class="layui-icon" style="color:#00b38a;">&#xe63b;</i> 联系电话:15217701050</p>
-                               <p class="posi"><i class="layui-icon" style="color:#00b38a;">&#xe6fc;</i> 爱好健身,打篮球,音乐</p>    
-                         </div>
-
-                         <div class="article box">
-                               <ul>
-                                     <p class="title">文章</p>
-                                     <li id="rem">那些年被"62.5%"欺骗过的rem</li>
-                                     <li id="proto">深入学习JavaScript之原型链</li>
-                                     <li id="communicate">Vue.js组件之间的通信</li>
-                                     <li id="domain">前端懂得多一点之跨域</li>
-                               </ul>
-                         </div>	
-
-      	</div>
-      </div>
+            <div class="posting">
+                进行中的话题
+                <div>
+                    <a href="./postingList.jsp">点击查看</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="all">
+                <img src="./images/icon_index_all.png" alt="所有话题">
+                <span>所有话题</span>
+            </div>
+            <div class="in">
+                <img src="./images/icon_index_i_in.png" alt="我发布的">
+                <span>我发布的</span>
+            </div>
+            <div class="over">
+                <img src="./images/icon_index_posting_over.png" alt="我参与的">
+                <span>我参与的</span>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="layui/layui.js"></script>
-<script src="js/page.js"></script>
-<script>
-layui.use(['layer', 'form'], function(){
-  var layer = layui.layer
-  ,form = layui.form();
-
-  
-});
-</script> 
 </html>
+<script>
+    $(function () {
+        //getCount();
+    });
+
+    $(document).on('click', '.all', function(){
+        window.location.href = './postingList.html';
+        localStorage.setItem("type", "ALL");
+    });
+
+    $(document).on('click', '.in', function(){
+        window.location.href = './postingList.html';
+        localStorage.setItem("type", "EDIT");
+    });
+
+    $(document).on('click', '.over', function(){
+        window.location.href = './postingList.html';
+        localStorage.setItem("type", "IN");
+    });
+
+    
+</script>
